@@ -125,6 +125,7 @@
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumnos";
+            this.Load += new System.EventHandler(this.frmAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

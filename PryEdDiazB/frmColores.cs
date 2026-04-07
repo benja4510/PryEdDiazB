@@ -6,10 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PryEdDiazB
-{
+{   
+
     public partial class frmColores : Form
     {
         public frmColores()
@@ -20,7 +22,9 @@ namespace PryEdDiazB
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivo x= new clsArchivo();
+            x.NomArchi = "Colores.txt";
             x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
 
             MessageBox.Show("Datos Cargados");
             txtNombre.Text = "";

@@ -29,7 +29,7 @@ namespace PryEdDiazB
 
         private void datosDeDesarolladorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDatosDesarrollador Datos = new frmDatosDesarrollador();  
+            frmDatosDesarrollador Datos = new frmDatosDesarrollador();
             Datos.ShowDialog();
         }
 
@@ -56,5 +56,7 @@ namespace PryEdDiazB
             frmAlumnos alumnos = new frmAlumnos();
             alumnos.ShowDialog();
         }
+
+       
     }
 }

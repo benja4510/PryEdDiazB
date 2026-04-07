@@ -16,5 +16,10 @@ namespace PryEdDiazB
         {
             InitializeComponent();
         }
+
+        private void frmDatosDesarrollador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

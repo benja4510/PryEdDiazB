@@ -35,59 +35,10 @@ namespace PryEdDiazB
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void frmAlumnos_Load(object sender, EventArgs e)
+        {
 
         }
     }
