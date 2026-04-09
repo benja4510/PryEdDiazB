@@ -30,7 +30,7 @@
         {
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCarrera = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cmbCarrera = new System.Windows.Forms.ComboBox();
@@ -59,14 +59,14 @@
             this.lblNombre.Text = "Nombre";
             this.lblNombre.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lblCarrera
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblCarrera.AutoSize = true;
+            this.lblCarrera.Location = new System.Drawing.Point(51, 179);
+            this.lblCarrera.Name = "lblCarrera";
+            this.lblCarrera.Size = new System.Drawing.Size(41, 13);
+            this.lblCarrera.TabIndex = 2;
+            this.lblCarrera.Text = "Carrera";
             // 
             // txtCodigo
             // 
@@ -119,7 +119,7 @@
             this.Controls.Add(this.cmbCarrera);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCarrera);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmAlumnos";
@@ -136,7 +136,7 @@
 
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cmbCarrera;

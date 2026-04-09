@@ -1,6 +1,6 @@
 ﻿namespace PryEdDiazB
 {
-    partial class frmMeses
+    partial class frmCarreras
     {
         /// <summary>
         /// Required designer variable.
@@ -28,72 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMes = new System.Windows.Forms.Label();
-            this.txtMes = new System.Windows.Forms.TextBox();
+            this.lstCarreras = new System.Windows.Forms.ListBox();
+            this.lblCarrera = new System.Windows.Forms.Label();
+            this.txtCarrera = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.lstMeses = new System.Windows.Forms.ListBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblMes
+            // lstCarreras
             // 
-            this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(57, 57);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(30, 13);
-            this.lblMes.TabIndex = 0;
-            this.lblMes.Text = "Mes:";
+            this.lstCarreras.FormattingEnabled = true;
+            this.lstCarreras.Location = new System.Drawing.Point(64, 242);
+            this.lstCarreras.Name = "lstCarreras";
+            this.lstCarreras.Size = new System.Drawing.Size(268, 134);
+            this.lstCarreras.TabIndex = 0;
             // 
-            // txtMes
+            // lblCarrera
             // 
-            this.txtMes.Location = new System.Drawing.Point(93, 50);
-            this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(196, 20);
-            this.txtMes.TabIndex = 1;
-            this.txtMes.TextChanged += new System.EventHandler(this.txtMes_TextChanged);
+            this.lblCarrera.AutoSize = true;
+            this.lblCarrera.Location = new System.Drawing.Point(61, 87);
+            this.lblCarrera.Name = "lblCarrera";
+            this.lblCarrera.Size = new System.Drawing.Size(44, 13);
+            this.lblCarrera.TabIndex = 1;
+            this.lblCarrera.Text = "Carrera:";
+            // 
+            // txtCarrera
+            // 
+            this.txtCarrera.Location = new System.Drawing.Point(232, 80);
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(100, 20);
+            this.txtCarrera.TabIndex = 2;
+            this.txtCarrera.TextChanged += new System.EventHandler(this.txtCarrera_TextChanged);
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(168, 88);
+            this.btnGrabar.Location = new System.Drawing.Point(257, 152);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(121, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // lstMeses
-            // 
-            this.lstMeses.FormattingEnabled = true;
-            this.lstMeses.Location = new System.Drawing.Point(43, 136);
-            this.lstMeses.Name = "lstMeses";
-            this.lstMeses.Size = new System.Drawing.Size(249, 147);
-            this.lstMeses.TabIndex = 4;
-            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(71, 88);
+            this.btnLimpiar.Location = new System.Drawing.Point(100, 152);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // frmMeses
+            // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 330);
+            this.ClientSize = new System.Drawing.Size(407, 409);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.lstMeses);
             this.Controls.Add(this.btnGrabar);
-            this.Controls.Add(this.txtMes);
-            this.Controls.Add(this.lblMes);
-            this.Name = "frmMeses";
+            this.Controls.Add(this.txtCarrera);
+            this.Controls.Add(this.lblCarrera);
+            this.Controls.Add(this.lstCarreras);
+            this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Meses";
-            this.Load += new System.EventHandler(this.frmMeses_Load);
+            this.Text = "Carreras";
+            this.Load += new System.EventHandler(this.frmCarreras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,10 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblMes;
-        private System.Windows.Forms.TextBox txtMes;
+        private System.Windows.Forms.ListBox lstCarreras;
+        private System.Windows.Forms.Label lblCarrera;
+        private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.Button btnGrabar;
-        private System.Windows.Forms.ListBox lstMeses;
         private System.Windows.Forms.Button btnLimpiar;
     }
 }

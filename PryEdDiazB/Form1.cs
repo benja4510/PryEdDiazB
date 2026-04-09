@@ -57,6 +57,10 @@ namespace PryEdDiazB
             alumnos.ShowDialog();
         }
 
-       
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras carreras = new frmCarreras();
+            carreras.ShowDialog();
+        }
     }
 }
