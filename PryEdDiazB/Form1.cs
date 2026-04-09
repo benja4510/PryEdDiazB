@@ -47,7 +47,7 @@ namespace PryEdDiazB
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeses clientes = new frmMeses();
+            frmClientes clientes = new frmClientes();
             clientes.ShowDialog();
         }
 
