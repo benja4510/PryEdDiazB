@@ -36,6 +36,9 @@
             this.cmbCarrera = new System.Windows.Forms.ComboBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.DgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,15 +102,35 @@
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // DgvAlumnos
             // 
             this.DgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.DgvAlumnos.Location = new System.Drawing.Point(54, 288);
             this.DgvAlumnos.Name = "DgvAlumnos";
             this.DgvAlumnos.Size = new System.Drawing.Size(458, 150);
             this.DgvAlumnos.TabIndex = 7;
             this.DgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Carrera";
+            this.Column3.Name = "Column3";
             // 
             // frmAlumnos
             // 
@@ -142,5 +165,8 @@
         private System.Windows.Forms.ComboBox cmbCarrera;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.DataGridView DgvAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

@@ -20,10 +20,10 @@ namespace PryEdDiazB
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             // x =  nombre variable tambien puede ser cualquier nombre, es el nombre del objeto que se va a crear (objCarreras,objColores, etc)
-            clsArchivo x = new clsArchivo();
-            x.NomArchi = "Carreras.csv";
-            x.Grabar(txtCarrera.Text);
-            x.Recorrer(lstCarreras);
+            clsArchivo objCarreras = new clsArchivo();
+            objCarreras.NomArchi = "Carreras.csv";
+            objCarreras.Grabar(txtCarrera.Text);
+            objCarreras.Recorrer(lstCarreras);
 
             MessageBox.Show("Carrera grabada correctamente");
             // Limpia el txtCarrera despues de grabar para que el usuario pueda ingresar otra carrera sin tener que borrar el texto anterior

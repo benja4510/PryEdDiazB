@@ -76,6 +76,7 @@ namespace PryEdDiazB
                 cmbDatos.Items.Add(DatoLeido);
                 DatoLeido = AD.ReadLine();
             }
+            cmbDatos.SelectedIndex = 0; // Establecer el primer elemento como seleccionado
             AD.Close();
         }
 
@@ -89,7 +90,8 @@ namespace PryEdDiazB
             while (DatoLeido != null)
             {
                 // Agregar el dato leído al DataGridView
-                string[] datos = DatoLeido.Split(','); // Suponiendo que los datos están separados por comas
+                Grilla.Rows.Add(DatoLeido.Split(';')); // Suponiendo que los datos están separados por comas
+                DatoLeido = AD.ReadLine();
             }
             AD.Close();
         }
