@@ -37,6 +37,7 @@
             this.mesesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.estructurasNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arbolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.estructurasNoLinealesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(550, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(536, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,6 +96,7 @@
             this.programacionOrientadaAObjetosToolStripMenuItem.Name = "programacionOrientadaAObjetosToolStripMenuItem";
             this.programacionOrientadaAObjetosToolStripMenuItem.Size = new System.Drawing.Size(202, 20);
             this.programacionOrientadaAObjetosToolStripMenuItem.Text = "Programacion Orientada a Objetos";
+            this.programacionOrientadaAObjetosToolStripMenuItem.Click += new System.EventHandler(this.programacionOrientadaAObjetosToolStripMenuItem_Click);
             // 
             // coloresToolStripMenuItem
             // 
@@ -124,6 +125,13 @@
             this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.alumnosToolStripMenuItem.Text = "Alumnos...";
             this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
+            // 
+            // carrerasToolStripMenuItem
+            // 
+            this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.carrerasToolStripMenuItem.Text = "Carreras...";
+            this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click);
             // 
             // estructurasLinealesToolStripMenuItem
             // 
@@ -172,27 +180,20 @@
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolToolStripMenuItem.Text = "Arbol...";
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.grafoToolStripMenuItem.Text = "Grafo...";
-            // 
-            // carrerasToolStripMenuItem
-            // 
-            this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.carrerasToolStripMenuItem.Text = "Carreras...";
-            this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 450);
+            this.ClientSize = new System.Drawing.Size(536, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";

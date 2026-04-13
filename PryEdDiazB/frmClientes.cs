@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,10 @@ namespace PryEdDiazB
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = "Clientes.csv";
+            if (File.Exists(x.NomArchi)) x.Recorrer(dgvClientes);
+
 
         }
 
@@ -32,6 +37,7 @@ namespace PryEdDiazB
             clsArchivo x = new clsArchivo();
             x.NomArchi = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+            x.Recorrer(dgvClientes);
 
         }
     }

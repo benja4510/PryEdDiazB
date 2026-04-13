@@ -79,18 +79,17 @@ namespace PryEdDiazB
             AD.Close();
         }
 
-        public void Recorrer(DataGridView dgvDatos)
+         public void Recorrer(DataGridView Grilla)
         {
-            dgvDatos.Rows.Clear();
-            String DatoLeido = "";
+            
+            String DatoLeido;
+            Grilla.Rows.Clear();
             StreamReader AD = new StreamReader(NomArchi);
-            DatoLeido = AD.ReadLine();
+            DatoLeido= AD.ReadLine();
             while (DatoLeido != null)
             {
                 // Agregar el dato leído al DataGridView
                 string[] datos = DatoLeido.Split(','); // Suponiendo que los datos están separados por comas
-                dgvDatos.Rows.Add(datos); // Agregar una nueva fila con los datos
-                DatoLeido = AD.ReadLine();
             }
             AD.Close();
         }
@@ -98,7 +97,4 @@ namespace PryEdDiazB
 
     }
 
-
-
-}   
-
+}

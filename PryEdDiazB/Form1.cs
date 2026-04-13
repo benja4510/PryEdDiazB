@@ -62,5 +62,10 @@ namespace PryEdDiazB
             frmCarreras carreras = new frmCarreras();
             carreras.ShowDialog();
         }
+
+        private void programacionOrientadaAObjetosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
