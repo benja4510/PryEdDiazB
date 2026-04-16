@@ -69,6 +69,7 @@
             this.lstMeses.Name = "lstMeses";
             this.lstMeses.Size = new System.Drawing.Size(249, 147);
             this.lstMeses.TabIndex = 4;
+            this.lstMeses.SelectedIndexChanged += new System.EventHandler(this.lstMeses_SelectedIndexChanged);
             // 
             // btnLimpiar
             // 

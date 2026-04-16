@@ -73,5 +73,11 @@ namespace PryEdDiazB
             frmCola Cola = new frmCola();
             Cola.ShowDialog();
         }
+
+        private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCiudades ciudades = new frmCiudades();
+            ciudades.ShowDialog();
+        }
     }
 }
