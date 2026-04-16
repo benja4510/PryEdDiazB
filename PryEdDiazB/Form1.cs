@@ -67,5 +67,11 @@ namespace PryEdDiazB
         {
 
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola Cola = new frmCola();
+            Cola.ShowDialog();
+        }
     }
 }
