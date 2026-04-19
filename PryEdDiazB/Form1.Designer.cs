@@ -151,12 +151,14 @@
             this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
             this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.provinciasToolStripMenuItem.Text = "Provincias...";
+            this.provinciasToolStripMenuItem.Click += new System.EventHandler(this.provinciasToolStripMenuItem_Click);
             // 
             // diasToolStripMenuItem
             // 
             this.diasToolStripMenuItem.Name = "diasToolStripMenuItem";
             this.diasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diasToolStripMenuItem.Text = "Dias...";
+            this.diasToolStripMenuItem.Click += new System.EventHandler(this.diasToolStripMenuItem_Click);
             // 
             // estructurasLinealesToolStripMenuItem
             // 

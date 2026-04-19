@@ -19,6 +19,7 @@ namespace PryEdDiazB
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            // Habilita o deshabilita el botón Grabar dependiendo de si el txtCiudad está vacío o no. Si el txtCiudad está vacío, el botón Grabar se deshabilita para evitar que el usuario intente grabar una ciudad sin ingresar un nombre. Si el txtCiudad tiene texto, el botón Grabar se habilita para permitir que el usuario grabe la ciudad.
             if (txtCiudad.Text == "")
             {
                 btnGrabar.Enabled = false;
@@ -33,8 +34,8 @@ namespace PryEdDiazB
         {
             // x =  nombre variable tambien puede ser cualquier nombre, es el nombre del objeto que se va a crear (objCarreras,objColores, etc)
             clsArchivo x = new clsArchivo();
-            x.NomArchi = "Meses.txt";
-            if (MessageBox.Show(" Se borraran todoss los meses registrados , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            x.NomArchi = "Ciudad.txt";
+            if (MessageBox.Show(" Se borraran todas las ciudades registradas , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 x.Borrar();
                 x.Recorrer(lstCiudades);
@@ -55,6 +56,13 @@ namespace PryEdDiazB
 
             MessageBox.Show("Ciudad grabada correctamente");
             txtCiudad.Text = "";
+        }
+
+        private void frmCiudades_Load(object sender, EventArgs e)
+        {
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }

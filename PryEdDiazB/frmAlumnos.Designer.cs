@@ -89,6 +89,10 @@
             // cmbCarrera
             // 
             this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Items.AddRange(new object[] {
+            "Analista en Sistemas de Informacion",
+            "Marketing ",
+            "Diseño Grafico"});
             this.cmbCarrera.Location = new System.Drawing.Point(240, 171);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(245, 21);

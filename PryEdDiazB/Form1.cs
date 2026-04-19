@@ -79,5 +79,17 @@ namespace PryEdDiazB
             frmCiudades ciudades = new frmCiudades();
             ciudades.ShowDialog();
         }
+
+        private void provinciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProvincias provincias = new frmProvincias();
+            provincias.ShowDialog();
+        }
+
+        private void diasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDias dias = new frmDias();
+            dias.ShowDialog();
+        }
     }
 }

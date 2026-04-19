@@ -1,6 +1,6 @@
 ﻿namespace PryEdDiazB
 {
-    partial class frmCiudades
+    partial class frmDias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCiudad = new System.Windows.Forms.Label();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.lblDia = new System.Windows.Forms.Label();
+            this.dtpDias = new System.Windows.Forms.DateTimePicker();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.lstCiudades = new System.Windows.Forms.ListBox();
+            this.lstDias = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // lblCiudad
+            // lblDia
             // 
-            this.lblCiudad.AutoSize = true;
-            this.lblCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.Location = new System.Drawing.Point(98, 83);
-            this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(75, 24);
-            this.lblCiudad.TabIndex = 0;
-            this.lblCiudad.Text = "Ciudad:";
+            this.lblDia.AutoSize = true;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.Location = new System.Drawing.Point(104, 107);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(42, 24);
+            this.lblDia.TabIndex = 0;
+            this.lblDia.Text = "Dia:";
             // 
-            // txtCiudad
+            // dtpDias
             // 
-            this.txtCiudad.Location = new System.Drawing.Point(189, 87);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
-            this.txtCiudad.TabIndex = 1;
-            this.txtCiudad.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dtpDias.Location = new System.Drawing.Point(184, 109);
+            this.dtpDias.Name = "dtpDias";
+            this.dtpDias.Size = new System.Drawing.Size(140, 20);
+            this.dtpDias.TabIndex = 1;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(102, 159);
+            this.btnLimpiar.Location = new System.Drawing.Point(108, 177);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 42);
             this.btnLimpiar.TabIndex = 2;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -65,38 +64,36 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(204, 159);
+            this.btnGrabar.Location = new System.Drawing.Point(222, 177);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(86, 42);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // lstCiudades
+            // lstDias
             // 
-            this.lstCiudades.FormattingEnabled = true;
-            this.lstCiudades.Items.AddRange(new object[] {
-            ""});
-            this.lstCiudades.Location = new System.Drawing.Point(84, 225);
-            this.lstCiudades.Name = "lstCiudades";
-            this.lstCiudades.Size = new System.Drawing.Size(223, 134);
-            this.lstCiudades.TabIndex = 4;
+            this.lstDias.FormattingEnabled = true;
+            this.lstDias.Location = new System.Drawing.Point(108, 265);
+            this.lstDias.Name = "lstDias";
+            this.lstDias.Size = new System.Drawing.Size(210, 134);
+            this.lstDias.TabIndex = 4;
             // 
-            // frmCiudades
+            // frmDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 421);
-            this.Controls.Add(this.lstCiudades);
+            this.ClientSize = new System.Drawing.Size(424, 450);
+            this.Controls.Add(this.lstDias);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.txtCiudad);
-            this.Controls.Add(this.lblCiudad);
-            this.Name = "frmCiudades";
+            this.Controls.Add(this.dtpDias);
+            this.Controls.Add(this.lblDia);
+            this.Name = "frmDias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ciudades";
-            this.Load += new System.EventHandler(this.frmCiudades_Load);
+            this.Text = "Dias";
+            this.Load += new System.EventHandler(this.frmDias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,10 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCiudad;
-        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.Label lblDia;
+        private System.Windows.Forms.DateTimePicker dtpDias;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGrabar;
-        private System.Windows.Forms.ListBox lstCiudades;
+        private System.Windows.Forms.ListBox lstDias;
     }
 }

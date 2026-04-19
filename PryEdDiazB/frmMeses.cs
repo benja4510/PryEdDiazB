@@ -56,7 +56,7 @@ namespace PryEdDiazB
             // x =  nombre variable tambien puede ser cualquier nombre, es el nombre del objeto que se va a crear (objCarreras,objColores, etc)
             clsArchivo x = new clsArchivo();
             x.NomArchi = "Meses.txt";
-            if (MessageBox.Show(" Se borraran todoss los meses registrados , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show(" Se borraran todos los meses registrados , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 x.Borrar();
                 x.Recorrer(lstMeses);

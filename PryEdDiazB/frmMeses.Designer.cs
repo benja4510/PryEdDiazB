@@ -38,17 +38,18 @@
             // lblMes
             // 
             this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(57, 57);
+            this.lblMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMes.Location = new System.Drawing.Point(67, 50);
             this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(30, 13);
+            this.lblMes.Size = new System.Drawing.Size(51, 24);
             this.lblMes.TabIndex = 0;
             this.lblMes.Text = "Mes:";
             // 
             // txtMes
             // 
-            this.txtMes.Location = new System.Drawing.Point(93, 50);
+            this.txtMes.Location = new System.Drawing.Point(168, 50);
             this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(196, 20);
+            this.txtMes.Size = new System.Drawing.Size(121, 20);
             this.txtMes.TabIndex = 1;
             this.txtMes.TextChanged += new System.EventHandler(this.txtMes_TextChanged);
             // 

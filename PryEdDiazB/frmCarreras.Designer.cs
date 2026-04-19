@@ -38,7 +38,7 @@
             // lstCarreras
             // 
             this.lstCarreras.FormattingEnabled = true;
-            this.lstCarreras.Location = new System.Drawing.Point(64, 242);
+            this.lstCarreras.Location = new System.Drawing.Point(81, 233);
             this.lstCarreras.Name = "lstCarreras";
             this.lstCarreras.Size = new System.Drawing.Size(268, 134);
             this.lstCarreras.TabIndex = 0;
@@ -46,9 +46,10 @@
             // lblCarrera
             // 
             this.lblCarrera.AutoSize = true;
-            this.lblCarrera.Location = new System.Drawing.Point(61, 87);
+            this.lblCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarrera.Location = new System.Drawing.Point(97, 80);
             this.lblCarrera.Name = "lblCarrera";
-            this.lblCarrera.Size = new System.Drawing.Size(44, 13);
+            this.lblCarrera.Size = new System.Drawing.Size(77, 24);
             this.lblCarrera.TabIndex = 1;
             this.lblCarrera.Text = "Carrera:";
             // 

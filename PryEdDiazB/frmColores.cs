@@ -27,7 +27,7 @@ namespace PryEdDiazB
             x.Grabar(txtNombre.Text);
             x.Recorrer(lstColores);
 
-            MessageBox.Show("Datos Cargados");
+            MessageBox.Show("Color grabado correctamente");
             // Limpio el txtNombre para que el usuario pueda ingresar otro color
             txtNombre.Text = "";
         }
@@ -61,7 +61,7 @@ namespace PryEdDiazB
         {
             clsArchivo x = new clsArchivo();
             x.NomArchi = "Colores.txt";
-            if (MessageBox.Show(" Se borraran todas las carreras registradas , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show(" Se borraran todos los colores registrados , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 x.Borrar();
                 x.Recorrer(lstColores);
