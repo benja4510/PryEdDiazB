@@ -49,7 +49,7 @@
             // txtProvincia
             // 
             this.txtProvincia.Location = new System.Drawing.Point(222, 101);
-            this.txtProvincia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProvincia.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.Size = new System.Drawing.Size(116, 21);
             this.txtProvincia.TabIndex = 1;
@@ -58,7 +58,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(96, 158);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(116, 39);
             this.btnLimpiar.TabIndex = 2;
@@ -69,7 +69,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(238, 158);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(116, 39);
             this.btnGrabar.TabIndex = 3;
@@ -82,7 +82,7 @@
             this.lstProvincias.FormattingEnabled = true;
             this.lstProvincias.ItemHeight = 15;
             this.lstProvincias.Location = new System.Drawing.Point(88, 235);
-            this.lstProvincias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstProvincias.Margin = new System.Windows.Forms.Padding(4);
             this.lstProvincias.Name = "lstProvincias";
             this.lstProvincias.Size = new System.Drawing.Size(266, 199);
             this.lstProvincias.TabIndex = 4;
@@ -91,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
             this.ClientSize = new System.Drawing.Size(415, 496);
             this.Controls.Add(this.lstProvincias);
             this.Controls.Add(this.btnGrabar);
@@ -98,7 +99,7 @@
             this.Controls.Add(this.txtProvincia);
             this.Controls.Add(this.lblProvincia);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProvincias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Provincias";

@@ -100,6 +100,7 @@
             // 
             // btnGrabar
             // 
+            this.btnGrabar.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
             this.btnGrabar.Location = new System.Drawing.Point(410, 238);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
@@ -140,7 +141,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 450);
+            this.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
+            this.ClientSize = new System.Drawing.Size(584, 497);
             this.Controls.Add(this.DgvAlumnos);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.cmbCarrera);

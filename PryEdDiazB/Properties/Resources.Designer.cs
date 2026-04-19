@@ -79,5 +79,15 @@ namespace PryEdDiazB.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_abstract_orange_wavy_background_orange_background_with_35768911 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_abstract-orange-wavy-background-orange-background-with_35768911", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

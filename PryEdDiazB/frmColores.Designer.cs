@@ -38,15 +38,16 @@
             // lblColor
             // 
             this.lblColor.AutoSize = true;
+            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.Location = new System.Drawing.Point(59, 65);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(34, 13);
+            this.lblColor.Size = new System.Drawing.Size(60, 24);
             this.lblColor.TabIndex = 0;
             this.lblColor.Text = "Color:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(112, 62);
+            this.txtNombre.Location = new System.Drawing.Point(145, 69);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 20);
             this.txtNombre.TabIndex = 1;
@@ -69,6 +70,7 @@
             this.lstColores.Name = "lstColores";
             this.lstColores.Size = new System.Drawing.Size(225, 121);
             this.lstColores.TabIndex = 4;
+            this.lstColores.SelectedIndexChanged += new System.EventHandler(this.lstColores_SelectedIndexChanged);
             // 
             // btnLimpiar
             // 
@@ -84,7 +86,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 398);
+            this.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
+            this.ClientSize = new System.Drawing.Size(389, 398);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstColores);
             this.Controls.Add(this.btnGrabar);

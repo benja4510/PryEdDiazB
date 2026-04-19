@@ -87,6 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
             this.ClientSize = new System.Drawing.Size(394, 421);
             this.Controls.Add(this.lstCiudades);
             this.Controls.Add(this.btnGrabar);

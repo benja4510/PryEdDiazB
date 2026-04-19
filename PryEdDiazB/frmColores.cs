@@ -67,5 +67,10 @@ namespace PryEdDiazB
                 x.Recorrer(lstColores);
             }
         }
+
+        private void lstColores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
+        
 }

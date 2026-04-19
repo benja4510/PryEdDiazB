@@ -178,5 +178,8 @@
   <ItemGroup>
     <None Include="Resources\pngtree-orange-and-white-abstract-line-wave-png-image_6749938.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_abstract-orange-wavy-background-orange-background-with_35768911.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

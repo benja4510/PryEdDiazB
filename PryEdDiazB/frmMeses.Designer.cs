@@ -39,7 +39,7 @@
             // 
             this.lblMes.AutoSize = true;
             this.lblMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMes.Location = new System.Drawing.Point(67, 50);
+            this.lblMes.Location = new System.Drawing.Point(107, 75);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(51, 24);
             this.lblMes.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // txtMes
             // 
-            this.txtMes.Location = new System.Drawing.Point(168, 50);
+            this.txtMes.Location = new System.Drawing.Point(216, 79);
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(121, 20);
             this.txtMes.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(168, 88);
+            this.btnGrabar.Location = new System.Drawing.Point(216, 148);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(121, 23);
             this.btnGrabar.TabIndex = 3;
@@ -66,7 +66,7 @@
             // lstMeses
             // 
             this.lstMeses.FormattingEnabled = true;
-            this.lstMeses.Location = new System.Drawing.Point(43, 136);
+            this.lstMeses.Location = new System.Drawing.Point(88, 211);
             this.lstMeses.Name = "lstMeses";
             this.lstMeses.Size = new System.Drawing.Size(249, 147);
             this.lstMeses.TabIndex = 4;
@@ -74,9 +74,9 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(71, 88);
+            this.btnLimpiar.Location = new System.Drawing.Point(88, 148);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(113, 23);
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -86,7 +86,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 330);
+            this.BackgroundImage = global::PryEdDiazB.Properties.Resources.pngtree_orange_and_white_abstract_line_wave_png_image_6749938;
+            this.ClientSize = new System.Drawing.Size(428, 447);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstMeses);
             this.Controls.Add(this.btnGrabar);
