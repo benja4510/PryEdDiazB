@@ -73,6 +73,56 @@ namespace PryEdDiazB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_04_19_224001 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-04-19 224001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_2583 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_2583", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_25831 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_25831", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_25832 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_25832", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_2584 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_2584", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_orange_and_white_abstract_line_wave_png_image_6749938 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-orange-and-white-abstract-line-wave-png-image_6749938", resourceCulture);

@@ -181,5 +181,20 @@
   <ItemGroup>
     <None Include="Resources\vecteezy_abstract-orange-wavy-background-orange-background-with_35768911.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2026-04-19 224001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_2583.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_25831.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_25832.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_2584.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
