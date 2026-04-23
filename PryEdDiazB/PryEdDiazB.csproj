@@ -103,11 +103,23 @@
     <Compile Include="frmDias.Designer.cs">
       <DependentUpon>frmDias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMeses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMeses.Designer.cs">
       <DependentUpon>frmMeses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPila.Designer.cs">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProvincias.cs">
       <SubType>Form</SubType>
@@ -144,8 +156,14 @@
     <EmbeddedResource Include="frmDias.resx">
       <DependentUpon>frmDias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMeses.resx">
       <DependentUpon>frmMeses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPila.resx">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvincias.resx">
       <DependentUpon>frmProvincias.cs</DependentUpon>
@@ -196,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_2584.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pila_de_datos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-enlazada.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

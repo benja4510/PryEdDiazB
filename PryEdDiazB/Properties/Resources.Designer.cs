@@ -123,6 +123,26 @@ namespace PryEdDiazB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lista_enlazada {
+            get {
+                object obj = ResourceManager.GetObject("lista-enlazada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pila_de_datos {
+            get {
+                object obj = ResourceManager.GetObject("Pila_de_datos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_orange_and_white_abstract_line_wave_png_image_6749938 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-orange-and-white-abstract-line-wave-png-image_6749938", resourceCulture);
