@@ -234,6 +234,7 @@
             this.Controls.Add(this.gboListado);
             this.Controls.Add(this.gboNuevoElemento);
             this.Name = "frmListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de Datos: Lineal";
             this.gboNuevoElemento.ResumeLayout(false);
             this.gboNuevoElemento.PerformLayout();

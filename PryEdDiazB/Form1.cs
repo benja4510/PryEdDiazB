@@ -97,5 +97,11 @@ namespace PryEdDiazB
             frmPila pila = new frmPila();
             pila.ShowDialog();
         }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple listaSimple = new frmListaSimple();
+            listaSimple.ShowDialog();
+        }
     }
 }
