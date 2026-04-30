@@ -91,5 +91,11 @@ namespace PryEdDiazB
             frmDias dias = new frmDias();
             dias.ShowDialog();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila pila = new frmPila();
+            pila.ShowDialog();
+        }
     }
 }

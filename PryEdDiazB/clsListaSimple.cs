@@ -8,7 +8,7 @@ using System.IO;
 
 namespace PryEdDiazB
 {
-    internal class clsPila
+    internal class clsListaSimple
     {
         private clsNodo pri;
 
@@ -18,29 +18,36 @@ namespace PryEdDiazB
             set { pri = value; }
         }
 
+
         public void Agregar(clsNodo Nuevo)
         {
-            if (pri == null)
+            if (Primero == null)
             {
-                pri = Nuevo;
+                Primero = Nuevo;
             }
             else
             {
-                Nuevo.Siguiente = pri;
-                pri = Nuevo;
-            }
-        }
+                if (Nuevo.Codigo <= Primero.Codigo)
+                {
+                    Nuevo.Siguiente = Primero;
+                    Primero = Nuevo;
+                }
+                else
+                {
+                    clsNodo aux = Primero;
+                    clsNodo ant = Primero;
+                    while (aux.Codigo < Nuevo.Codigo)
+                    {
+                        ant = aux;
+                        aux = aux.Siguiente;
+                        if (aux == null) break;
 
-        public void Eliminar()
-        {
-            if (pri != null)
-            {
-                pri = pri.Siguiente;
+                    }
+                    ant.Siguiente = Nuevo;
+                    Nuevo.Siguiente = aux;
+                }
             }
-            else
-            {
-                MessageBox.Show("La pila está vacía.");
-            }
+
         }
         public void Recorrer(DataGridView Grilla)
         {
@@ -89,9 +96,29 @@ namespace PryEdDiazB
                 aux = aux.Siguiente;
             }
             AD.Close();
-        }
-     
-        
 
+
+        }
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo)
+            {
+                Primero = Primero.Siguiente;
+            }
+            else
+            {
+                clsNodo aux1 = Primero;
+                clsNodo aux2 = Primero;
+                while (aux1.Codigo != Codigo)
+                {
+                    aux2 = aux1;
+                    aux1 = aux1.Siguiente;
+                    if (aux1 == null) break;
+                }
+                aux2.Siguiente = aux1.Siguiente;
+
+            }
+
+        }
     }
 }

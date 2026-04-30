@@ -257,7 +257,7 @@
             this.lstPila.FormattingEnabled = true;
             this.lstPila.Location = new System.Drawing.Point(18, 32);
             this.lstPila.Name = "lstPila";
-            this.lstPila.Size = new System.Drawing.Size(173, 212);
+            this.lstPila.Size = new System.Drawing.Size(173, 225);
             this.lstPila.TabIndex = 2;
             // 
             // pictureBox1
@@ -280,6 +280,7 @@
             this.Controls.Add(this.gboElementoEliminado);
             this.Controls.Add(this.gboNuevoElemento);
             this.Name = "frmPila";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de Datos: Pila";
             this.gboNuevoElemento.ResumeLayout(false);
             this.gboNuevoElemento.PerformLayout();
