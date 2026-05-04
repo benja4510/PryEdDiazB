@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsArchivo.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
@@ -231,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lista-enlazada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image001.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,7 @@ namespace PryEdDiazB
         private String nom;
         private String tra;
         private clsNodo Sig;
+        private clsNodo Ant;
 
         // Propiedades del nodo
         public Int32 Codigo
@@ -38,4 +39,11 @@ namespace PryEdDiazB
             get { return Sig; }
             set { Sig = value; }
         }
-    }   }
+
+        public clsNodo Anterior
+        {
+            get { return Ant; }
+            set { Ant = value; }
+        }
+    }
+}
