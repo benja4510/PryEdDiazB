@@ -37,7 +37,7 @@ namespace PryEdDiazB
             }
             else
             {
-                if  (Nvo.Codigo < Primero.Codigo)
+                if (Nvo.Codigo < Primero.Codigo)
                 {
                     Nvo.Siguiente = Primero;
                     Primero.Anterior = Nvo;
@@ -120,23 +120,90 @@ namespace PryEdDiazB
         }
         public void Eliminar(Int32 Codigo)
         {
-            if (Primero.Codigo == Codigo)
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
-                Primero = Primero.Siguiente;
+                Primero = null;
+                Ultimo= null;
             }
             else
             {
-                clsNodo aux1 = Primero;
-                clsNodo aux2 = Primero;
-                while (aux1.Codigo != Codigo)
+               if(Primero.Codigo == Codigo)
                 {
-                    aux2 = aux1;
-                    aux1 = aux1.Siguiente;
-                    if (aux1 == null) break;
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
                 }
-                aux2.Siguiente = aux1.Siguiente;
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Codigo)
+                        {
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                        }
+                        Aux = Aux.Siguiente;
+                        Ant.Siguiente = Aux;
+                        Aux.Anterior = Ant;
+                    }
+                }
 
             }
+
+        }
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDesc(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDesc(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+
+        }
+        public void RecorrerDesc(String NombreArchivo)
+        {
+            clsNodo aux = Ultimo;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Lista de Espera/n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Anterior;
+            }
+            AD.Close();
 
         }
     }
