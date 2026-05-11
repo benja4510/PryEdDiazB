@@ -62,6 +62,32 @@ namespace PryEdDiazB
 
             }
         }
-    }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbCodigo.SelectedIndex != -1)
+            {
+                // Intentamos convertir de forma segura
+                if (Int32.TryParse(cmbCodigo.Text, out Int32 codigo))
+                {
+                    objLista.Eliminar(codigo);
+
+                    // Actualizar visualmente
+                    objLista.Recorrer(dgvListaDoble);
+                    objLista.Recorrer(cmbCodigo);
+                    objLista.Recorrer(lstListaDoble);
+
+                    MessageBox.Show("Eliminado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("El valor seleccionado no es un código válido.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un código.");
+            }
+        }
+    }
 }

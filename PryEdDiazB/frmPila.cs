@@ -40,29 +40,31 @@ namespace PryEdDiazB
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            // Verificar si la pila no está vacía antes de eliminar
             if (objPila.Primero != null)
             {
-                lblCodigo.Text = objPila.Primero.Codigo.ToString();
-                lblNombre.Text = objPila.Primero.Nombre;
-                lblTramite.Text = objPila.Primero.Tramite;
+                // Usamos los nombres nuevos que acabamos de poner
+                lblCodigoEliminado.Text = objPila.Primero.Codigo.ToString();
+                lblNombreEliminado.Text = objPila.Primero.Nombre;
+                lblTramiteEliminado.Text = objPila.Primero.Tramite;
 
                 objPila.Eliminar();
-                MessageBox.Show("Tramite Eliminado");
+
+                MessageBox.Show("Trámite Eliminado");
+
                 objPila.Recorrer(lstPila);
                 objPila.Recorrer(dgvPila);
                 objPila.Recorrer("Pila.csv");
             }
-            // Si la pila está vacía, mostrar un mensaje y limpiar las etiquetas
             else
             {
-                lblCodigo.Text =
-                lblNombre.Text = "";
-                lblTramite.Text = "";
+                // Limpiamos los nombres nuevos
+                lblCodigoEliminado.Text = "";
+                lblNombreEliminado.Text = "";
+                lblTramiteEliminado.Text = "";
                 MessageBox.Show("La pila está vacía.");
             }
         }
 
-      
     }
+
 }

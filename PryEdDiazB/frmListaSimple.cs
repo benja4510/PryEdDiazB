@@ -54,18 +54,46 @@ namespace PryEdDiazB
 
         private void ValidarDatos()
         {
-            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            // Usamos IsNullOrWhiteSpace para que sea más robusto
+            bool codigoOk = !string.IsNullOrWhiteSpace(txtCodigo.Text);
+            bool nombreOk = !string.IsNullOrWhiteSpace(txtNombre.Text);
+            bool tramiteOk = !string.IsNullOrWhiteSpace(txtTramite.Text);
+
+            if (codigoOk && nombreOk && tramiteOk)
             {
                 btnAgregar.Enabled = true;
             }
             else
             {
                 btnAgregar.Enabled = false;
-
             }
         }
 
-       
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbCodigo.SelectedIndex != -1)
+            {
+                // Intentamos convertir de forma segura
+                if (Int32.TryParse(cmbCodigo.Text, out Int32 codigo))
+                {
+                    objLista.Eliminar(codigo);
+
+                    // Actualizar visualmente
+                    objLista.Recorrer(dgvListaSimple);
+                    objLista.Recorrer(cmbCodigo);
+                    objLista.Recorrer(lstListaSimple);
+
+                    MessageBox.Show("Eliminado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("El valor seleccionado no es un código válido.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un código.");
+            }
+        }
     }
 }
-

@@ -40,5 +40,21 @@ namespace PryEdDiazB
             x.Recorrer(dgvClientes);
 
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+            // x =  nombre variable tambien puede ser cualquier nombre, es el nombre del objeto que se va a crear (objCarreras,objColores, etc)
+            clsArchivo x = new clsArchivo();
+            // El método Borrar() se llama para eliminar el archivo "Clientes.csv" si existe, lo que permite limpiar la lista de clientes. Luego, se establece el nombre del archivo nuevamente y se llama al método Recorrer() para actualizar la lista de clientes en el DataGridView dgvClientes, mostrando que ya no hay clientes registrados.
+
+            x.NomArchi = "Clientes.csv";
+            if (MessageBox.Show(" Se borraran todos los clientes registradas , Continuar?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                x.Borrar();
+                x.Recorrer(dgvClientes);
+            }
+        }
     }
 }
+

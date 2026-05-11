@@ -38,9 +38,9 @@ namespace PryEdDiazB
         {
             if (ColaEspera.Primero != null)
             {
-                lblCodigo.Text= ColaEspera.Primero.Codigo.ToString();
-                lblNombre.Text= ColaEspera.Primero.Nombre;
-                lblTramite.Text= ColaEspera.Primero.Tramite;
+                lblCodigoEliminado.Text= ColaEspera.Primero.Codigo.ToString();
+                lblNombreEliminado.Text= ColaEspera.Primero.Nombre;
+                lblTramiteEliminado.Text= ColaEspera.Primero.Tramite;
 
                 ColaEspera.Eliminar();
                 ColaEspera.Recorrer(dgvCola);
@@ -52,7 +52,7 @@ namespace PryEdDiazB
                 MessageBox.Show("No hay personas en la cola.");
                 lblCodigo.Text = "";
                 lblNombre.Text = "";
-                lblTramite.Text = "";
+                lblTramiteEliminado.Text = "";
             }
         }
     }

@@ -33,15 +33,15 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTramite1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gboElementoEliminado = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTramiteEliminado = new System.Windows.Forms.Label();
+            this.lblNombreEliminado = new System.Windows.Forms.Label();
+            this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.lblTramite2 = new System.Windows.Forms.Label();
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.lblCodigo2 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.gboNuevoElemento.Controls.Add(this.btnAgregar);
             this.gboNuevoElemento.Controls.Add(this.txtNombre);
             this.gboNuevoElemento.Controls.Add(this.txtCodigo);
-            this.gboNuevoElemento.Controls.Add(this.label1);
+            this.gboNuevoElemento.Controls.Add(this.lblTramite1);
             this.gboNuevoElemento.Controls.Add(this.lblNombre);
             this.gboNuevoElemento.Controls.Add(this.lblCodigo);
             this.gboNuevoElemento.Location = new System.Drawing.Point(223, 18);
@@ -106,14 +106,14 @@
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 4;
             // 
-            // label1
+            // lblTramite1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tramite:";
+            this.lblTramite1.AutoSize = true;
+            this.lblTramite1.Location = new System.Drawing.Point(22, 108);
+            this.lblTramite1.Name = "lblTramite1";
+            this.lblTramite1.Size = new System.Drawing.Size(45, 13);
+            this.lblTramite1.TabIndex = 3;
+            this.lblTramite1.Text = "Tramite:";
             // 
             // lblNombre
             // 
@@ -136,9 +136,9 @@
             // gboElementoEliminado
             // 
             this.gboElementoEliminado.Controls.Add(this.btnEliminar);
-            this.gboElementoEliminado.Controls.Add(this.lblTramite);
-            this.gboElementoEliminado.Controls.Add(this.label3);
-            this.gboElementoEliminado.Controls.Add(this.label2);
+            this.gboElementoEliminado.Controls.Add(this.lblTramiteEliminado);
+            this.gboElementoEliminado.Controls.Add(this.lblNombreEliminado);
+            this.gboElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gboElementoEliminado.Controls.Add(this.lblTramite2);
             this.gboElementoEliminado.Controls.Add(this.lblNombre2);
             this.gboElementoEliminado.Controls.Add(this.lblCodigo2);
@@ -159,32 +159,32 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblTramite
+            // lblTramiteEliminado
             // 
-            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTramite.Location = new System.Drawing.Point(94, 111);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(100, 23);
-            this.lblTramite.TabIndex = 6;
-            this.lblTramite.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblTramiteEliminado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramiteEliminado.Location = new System.Drawing.Point(94, 111);
+            this.lblTramiteEliminado.Name = "lblTramiteEliminado";
+            this.lblTramiteEliminado.Size = new System.Drawing.Size(100, 23);
+            this.lblTramiteEliminado.TabIndex = 6;
+            this.lblTramiteEliminado.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label3
+            // lblNombreEliminado
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(94, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 5;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblNombreEliminado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreEliminado.Location = new System.Drawing.Point(94, 73);
+            this.lblNombreEliminado.Name = "lblNombreEliminado";
+            this.lblNombreEliminado.Size = new System.Drawing.Size(100, 23);
+            this.lblNombreEliminado.TabIndex = 5;
+            this.lblNombreEliminado.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label2
+            // lblCodigoEliminado
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(94, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 4;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblCodigoEliminado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigoEliminado.Location = new System.Drawing.Point(94, 38);
+            this.lblCodigoEliminado.Name = "lblCodigoEliminado";
+            this.lblCodigoEliminado.Size = new System.Drawing.Size(100, 23);
+            this.lblCodigoEliminado.TabIndex = 4;
+            this.lblCodigoEliminado.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblTramite2
             // 
@@ -299,16 +299,16 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTramite1;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.GroupBox gboElementoEliminado;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTramiteEliminado;
+        private System.Windows.Forms.Label lblNombreEliminado;
+        private System.Windows.Forms.Label lblCodigoEliminado;
         private System.Windows.Forms.Label lblTramite2;
         private System.Windows.Forms.Label lblNombre2;
         private System.Windows.Forms.Label lblCodigo2;
