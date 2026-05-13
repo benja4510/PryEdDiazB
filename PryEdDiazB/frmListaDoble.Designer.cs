@@ -250,6 +250,7 @@
             this.optAscendente.TabStop = true;
             this.optAscendente.Text = "Ascendente";
             this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
             // pictureBox1
             // 

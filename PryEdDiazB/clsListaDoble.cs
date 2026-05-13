@@ -54,21 +54,23 @@ namespace PryEdDiazB
                     else
                     {
                         clsNodo Aux = Primero;
-                        clsNodo Ant = Primero;
-                        while (Aux.Codigo > Nvo.Codigo)
+                        clsNodo Ant = Primero;                    
+                        while (Aux.Codigo < Nvo.Codigo)
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
                         }
                         Ant.Siguiente = Nvo;
                         Nvo.Siguiente = Aux;
-                        Nvo.Anterior = Nvo;
-                        Aux.Anterior = Ant;
+                        Nvo.Anterior = Ant; 
+                        Aux.Anterior = Nvo; 
                     }
+
                 }
             }
-
         }
+
+
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -148,15 +150,16 @@ namespace PryEdDiazB
                             Ant = Aux;
                             Aux = Aux.Siguiente;
                         }
-                        Aux = Aux.Siguiente;
-                        Ant.Siguiente = Aux;
-                        Aux.Anterior = Ant;
+                        Ant.Siguiente = Aux.Siguiente;
+                        clsNodo Prox = Aux.Siguiente;
+                        Prox.Anterior = Ant;
                     }
+
                 }
 
             }
-
         }
+
         public void RecorrerDesc(DataGridView Grilla)
         {
             clsNodo aux = Ultimo;

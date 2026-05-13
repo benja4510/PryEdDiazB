@@ -34,6 +34,15 @@ namespace PryEdDiazB
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+
+            if (optAscendente.Checked)
+            {
+                objLista.Recorrer(dgvListaDoble);
+            }
+            else
+            {
+                objLista.RecorrerDesc(dgvListaDoble);
+            }
         }
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
@@ -89,5 +98,27 @@ namespace PryEdDiazB
                 MessageBox.Show("Seleccione un código.");
             }
         }
-    }
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optAscendente.Checked)
+            {
+                // Llamas a tus métodos normales (Siguiente)
+                objLista.Recorrer(dgvListaDoble);
+                objLista.Recorrer(lstListaDoble);
+                objLista.Recorrer(cmbCodigo);
+            }
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optDescendente.Checked)
+            {
+                // Llamas a tus métodos nuevos (Anterior)
+                objLista.RecorrerDesc(dgvListaDoble);
+                objLista.RecorrerDesc(lstListaDoble);
+                objLista.RecorrerDesc(cmbCodigo);
+            }
+        }
+
+    }   
 }
