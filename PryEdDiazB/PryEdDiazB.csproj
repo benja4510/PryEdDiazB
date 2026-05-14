@@ -64,6 +64,30 @@
     <Compile Include="frmAlumnos.Designer.cs">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbolBinario.Designer.cs">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.Designer.cs">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdOperaciones.Designer.cs">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdRepaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdRepaso.Designer.cs">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +130,12 @@
     <Compile Include="frmDias.Designer.cs">
       <DependentUpon>frmDias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGrafo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrafo.Designer.cs">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +174,18 @@
     <EmbeddedResource Include="frmAlumnos.resx">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmArbolBinario.resx">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdConsultaTablas.resx">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdOperaciones.resx">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdRepaso.resx">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDias.resx">
       <DependentUpon>frmDias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafo.resx">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>

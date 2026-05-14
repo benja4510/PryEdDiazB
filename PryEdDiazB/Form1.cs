@@ -109,5 +109,35 @@ namespace PryEdDiazB
             frmListaDoble listaDoble = new frmListaDoble();
             listaDoble.ShowDialog();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario ArbolBinario = new frmArbolBinario();
+            ArbolBinario.ShowDialog();
+        }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo Grafo = new frmGrafo();
+            Grafo.ShowDialog();
+        }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaTablas ConsultaTablas = new frmBdConsultaTablas();
+            ConsultaTablas.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdOperaciones OperacionesBd = new frmBdOperaciones();
+            OperacionesBd.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdRepaso repaso = new frmBdRepaso();
+            repaso.ShowDialog();
+        }
     }
 }
