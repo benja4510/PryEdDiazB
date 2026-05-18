@@ -45,5 +45,18 @@ namespace PryEdDiazB
             get { return Ant; }
             set { Ant = value; }
         }
-    }
+
+        public clsNodo Izquierdo
+        {
+            get { return Ant; }
+            set { Ant = value; }
+        }
+
+        public clsNodo Derecho
+        {
+            get { return Sig; }
+            set { Sig = value; }
+        }
+    }   
+
 }
