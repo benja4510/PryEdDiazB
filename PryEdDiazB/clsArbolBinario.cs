@@ -49,9 +49,9 @@ namespace PryEdDiazB
 
         private void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
-            if (R.Izquierdo != null) InOrdenAsc(Dgv,R.Izquierdo);
+            if (R.Izquierdo != null) InOrdenAsc(Dgv, R.Izquierdo);
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-            if (R.Derecho != null) InOrdenAsc(Dgv,R.Derecho);
+            if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
         }
 
         public void Recorrer(ComboBox Lista)
@@ -64,7 +64,30 @@ namespace PryEdDiazB
         {
             if (R.Izquierdo != null) InOrdenAsc(Lst, R.Izquierdo);
             Lst.Items.Add(R.Codigo);
-            if (R.Derecho != null) InOrdenAsc(Lst,R.Derecho);
+            if (R.Derecho != null) InOrdenAsc(Lst, R.Derecho);
         }
-    }
-}   
+
+        public void Recorrer(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Arbol");
+            tree.Nodes.Add(NodoPadre);
+            PreOrden(Raiz, NodoPadre);
+            tree.ExpandAll();
+        }
+
+        private void PreOrden(clsNodo R, TreeNode NodoTreeView)
+        {
+            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            if (R.Izquierdo != null)
+            {
+                PreOrden(R.Izquierdo, NodoPadre);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrden(R.Derecho, NodoPadre);
+            }
+    
+
+ }  }   } 
+   
