@@ -87,7 +87,58 @@ namespace PryEdDiazB
             {
                 PreOrden(R.Derecho, NodoPadre);
             }
-    
 
- }  }   } 
-   
+
+
+        }
+
+        public void Recorrer(List<clsNodo> Vector)
+        {
+            Vector.Clear();
+            InOrdenAsc(Vector, Raiz);
+        }
+
+        private void InOrdenAsc(List<clsNodo> Vec, clsNodo R)
+        {
+            if (R == null) return;
+            InOrdenAsc(Vec, R.Izquierdo);
+            Vec.Add(R);
+            InOrdenAsc(Vec, R.Derecho);
+
+
+        }
+
+        public void RecorrerPreOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+
+        private void PreOrden(DataGridView Dgv, clsNodo R)
+        {
+            if (R == null) return;
+            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            PreOrden(Dgv, R.Izquierdo);
+            PreOrden(Dgv, R.Derecho);
+
+        }
+        public void RecorrerPostOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+
+        private void PostOrden(DataGridView Dgv, clsNodo R)
+        {
+            if (R == null) return;
+            PostOrden(Dgv, R.Izquierdo);
+            PostOrden(Dgv, R.Derecho);
+            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+        }
+
+    }
+}
+
+
+
+
