@@ -48,6 +48,11 @@
             // cboTablaDatos
             // 
             this.cboTablaDatos.FormattingEnabled = true;
+            this.cboTablaDatos.Items.AddRange(new object[] {
+            "Autor",
+            "Idioma",
+            "Libro",
+            "Pais"});
             this.cboTablaDatos.Location = new System.Drawing.Point(482, 412);
             this.cboTablaDatos.Name = "cboTablaDatos";
             this.cboTablaDatos.Size = new System.Drawing.Size(121, 21);
@@ -69,6 +74,7 @@
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // frmBdConsultaTablas
             // 

@@ -16,5 +16,11 @@ namespace PryEdDiazB
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDeDatos bd = new clsBaseDeDatos();
+            bd.Listar(cboTablaDatos.Text, dgvTablaDatos);
+        }
     }
 }
