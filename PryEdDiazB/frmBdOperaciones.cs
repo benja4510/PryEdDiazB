@@ -12,9 +12,27 @@ namespace PryEdDiazB
 {
     public partial class frmBdOperaciones : Form
     {
+        clsBaseDeDatos objBaseDatos = new clsBaseDeDatos();
+
         public frmBdOperaciones()
         {
             InitializeComponent();
+        }
+
+        private void btnProyeccionSimple_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO" +
+                     "FROM LIBRO" +
+                     "ORDER BY 1 DESC";
+            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+        }
+
+        private void btnProyeccionMultiatributo_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO, AÑO" +
+                     "FROM LIBRO" +
+                     "ORDER BY 1 DESC";
+            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
         }
     }
 }

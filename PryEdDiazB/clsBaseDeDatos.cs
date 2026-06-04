@@ -6,21 +6,17 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
-using System.Security.Cryptography;
-
 
 namespace PryEdDiazB
 {
     internal class clsBaseDeDatos
     {
-
         private OleDbConnection conexion = new OleDbConnection();
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
-        private string cadenaConexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\BaseDeDatos.accdb";
-        private string cadentaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\BaseDeDatos.accdb";
-
+        private string cadenaConexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= Libreria.mdb";
+        private string cadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Libreria.mdb";
 
         public void Listar(DataGridView Grilla)
         {
@@ -35,19 +31,22 @@ namespace PryEdDiazB
 
                 adaptador.SelectCommand = comando;
                 DataTable Ds = new DataTable();
-                adaptador.Fill(Ds, "Libro");
+                adaptador.Fill(Ds); 
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = Ds.Tables["Libro"];
-
-                conexion.Close();
+                Grilla.DataSource = Ds; 
             }
             catch (Exception x)
             {
                 MessageBox.Show(x.ToString());
             }
-
+            finally
+            {
+                conexion.Close(); 
+            }
         }
+
+       
         public void Listar(String tabla, DataGridView Grilla)
         {
             try
@@ -61,20 +60,22 @@ namespace PryEdDiazB
 
                 adaptador.SelectCommand = comando;
                 DataTable Ds = new DataTable();
-                adaptador.Fill(Ds, "Libro");
+                adaptador.Fill(Ds);
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = Ds.Tables[tabla];
-
-                conexion.Close();
+                Grilla.DataSource = Ds; 
             }
-            catch (Exception e)
+            catch (Exception x)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(x.Message);
+            }
+            finally
+            {
                 conexion.Close();
             }
-
         }
+
+        
         public void Listar(DataGridView Grilla, String varInstruccionSQL)
         {
             try
@@ -83,30 +84,26 @@ namespace PryEdDiazB
                 conexion.Open();
 
                 comando.Connection = conexion;
-                comando.CommandType = CommandType.TableDirect;
-                comando.CommandText = "Resultado";
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = varInstruccionSQL;
 
                 adaptador.SelectCommand = comando;
                 DataTable DS = new DataTable();
-                adaptador.Fill(DS, "Resultado");
+                adaptador.Fill(DS);
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = DS.Tables["Resultado"];
-
-                conexion.Close();
+                Grilla.DataSource = DS; 
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-
-
-
+            finally
+            {
+                conexion.Close();
+            }
         }
-
-
-
-
     }
-
 }
+
+    

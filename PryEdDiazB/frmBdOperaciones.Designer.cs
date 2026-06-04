@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvBaseDatos = new System.Windows.Forms.DataGridView();
+            this.dgvDatosBaseDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnProyeccionSimple = new System.Windows.Forms.Button();
-            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
+            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnProyeccionSimple = new System.Windows.Forms.Button();
             this.gboOperacionesSeleccion = new System.Windows.Forms.GroupBox();
-            this.btnSeleccionSimple = new System.Windows.Forms.Button();
-            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
             this.btnSeleccionConvolucion = new System.Windows.Forms.Button();
+            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnSeleccionSimple = new System.Windows.Forms.Button();
             this.gboOperaciones = new System.Windows.Forms.GroupBox();
-            this.btnUnion = new System.Windows.Forms.Button();
-            this.btnInterseccion = new System.Windows.Forms.Button();
             this.btnDiferencia = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaseDatos)).BeginInit();
+            this.btnInterseccion = new System.Windows.Forms.Button();
+            this.btnUnion = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosBaseDatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gboOperacionesSeleccion.SuspendLayout();
             this.gboOperaciones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvBaseDatos
+            // dgvDatosBaseDatos
             // 
-            this.dgvBaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaseDatos.Location = new System.Drawing.Point(12, 12);
-            this.dgvBaseDatos.Name = "dgvBaseDatos";
-            this.dgvBaseDatos.Size = new System.Drawing.Size(669, 329);
-            this.dgvBaseDatos.TabIndex = 0;
+            this.dgvDatosBaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatosBaseDatos.Location = new System.Drawing.Point(12, 12);
+            this.dgvDatosBaseDatos.Name = "dgvDatosBaseDatos";
+            this.dgvDatosBaseDatos.Size = new System.Drawing.Size(669, 329);
+            this.dgvDatosBaseDatos.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -67,14 +67,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones de Proyeccion - SELECT";
             // 
-            // btnProyeccionSimple
+            // btnJuntar
             // 
-            this.btnProyeccionSimple.Location = new System.Drawing.Point(6, 19);
-            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
-            this.btnProyeccionSimple.Size = new System.Drawing.Size(226, 23);
-            this.btnProyeccionSimple.TabIndex = 0;
-            this.btnProyeccionSimple.Text = "Proyeccion Simple";
-            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnJuntar.Location = new System.Drawing.Point(6, 71);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(226, 23);
+            this.btnJuntar.TabIndex = 2;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
             // 
             // btnProyeccionMultiatributo
             // 
@@ -84,15 +84,17 @@
             this.btnProyeccionMultiatributo.TabIndex = 1;
             this.btnProyeccionMultiatributo.Text = "Proyeccion Multiatributo";
             this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
             // 
-            // btnJuntar
+            // btnProyeccionSimple
             // 
-            this.btnJuntar.Location = new System.Drawing.Point(6, 71);
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(226, 23);
-            this.btnJuntar.TabIndex = 2;
-            this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Location = new System.Drawing.Point(6, 19);
+            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
+            this.btnProyeccionSimple.Size = new System.Drawing.Size(226, 23);
+            this.btnProyeccionSimple.TabIndex = 0;
+            this.btnProyeccionSimple.Text = "Proyeccion Simple";
+            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
             // 
             // gboOperacionesSeleccion
             // 
@@ -106,14 +108,14 @@
             this.gboOperacionesSeleccion.TabStop = false;
             this.gboOperacionesSeleccion.Text = "Operaciones de Seleccion - WHERE";
             // 
-            // btnSeleccionSimple
+            // btnSeleccionConvolucion
             // 
-            this.btnSeleccionSimple.Location = new System.Drawing.Point(6, 19);
-            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
-            this.btnSeleccionSimple.Size = new System.Drawing.Size(232, 23);
-            this.btnSeleccionSimple.TabIndex = 0;
-            this.btnSeleccionSimple.Text = "Seleccion Simple";
-            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(6, 71);
+            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
+            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(232, 23);
+            this.btnSeleccionConvolucion.TabIndex = 2;
+            this.btnSeleccionConvolucion.Text = "Selecion por convolucion";
+            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
             // 
             // btnSeleccionMultiatributo
             // 
@@ -124,14 +126,14 @@
             this.btnSeleccionMultiatributo.Text = "Seleccion Multiatributo";
             this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
             // 
-            // btnSeleccionConvolucion
+            // btnSeleccionSimple
             // 
-            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(6, 71);
-            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
-            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(232, 23);
-            this.btnSeleccionConvolucion.TabIndex = 2;
-            this.btnSeleccionConvolucion.Text = "Selecion por convolucion";
-            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Location = new System.Drawing.Point(6, 19);
+            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
+            this.btnSeleccionSimple.Size = new System.Drawing.Size(232, 23);
+            this.btnSeleccionSimple.TabIndex = 0;
+            this.btnSeleccionSimple.Text = "Seleccion Simple";
+            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
             // 
             // gboOperaciones
             // 
@@ -145,14 +147,14 @@
             this.gboOperaciones.TabStop = false;
             this.gboOperaciones.Text = "Operaciones Algebraicas";
             // 
-            // btnUnion
+            // btnDiferencia
             // 
-            this.btnUnion.Location = new System.Drawing.Point(6, 19);
-            this.btnUnion.Name = "btnUnion";
-            this.btnUnion.Size = new System.Drawing.Size(164, 23);
-            this.btnUnion.TabIndex = 0;
-            this.btnUnion.Text = "Union";
-            this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Location = new System.Drawing.Point(6, 77);
+            this.btnDiferencia.Name = "btnDiferencia";
+            this.btnDiferencia.Size = new System.Drawing.Size(164, 23);
+            this.btnDiferencia.TabIndex = 2;
+            this.btnDiferencia.Text = "Diferencia";
+            this.btnDiferencia.UseVisualStyleBackColor = true;
             // 
             // btnInterseccion
             // 
@@ -163,14 +165,14 @@
             this.btnInterseccion.Text = "Interseccion";
             this.btnInterseccion.UseVisualStyleBackColor = true;
             // 
-            // btnDiferencia
+            // btnUnion
             // 
-            this.btnDiferencia.Location = new System.Drawing.Point(6, 77);
-            this.btnDiferencia.Name = "btnDiferencia";
-            this.btnDiferencia.Size = new System.Drawing.Size(164, 23);
-            this.btnDiferencia.TabIndex = 2;
-            this.btnDiferencia.Text = "Diferencia";
-            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnUnion.Location = new System.Drawing.Point(6, 19);
+            this.btnUnion.Name = "btnUnion";
+            this.btnUnion.Size = new System.Drawing.Size(164, 23);
+            this.btnUnion.TabIndex = 0;
+            this.btnUnion.Text = "Union";
+            this.btnUnion.UseVisualStyleBackColor = true;
             // 
             // frmBdOperaciones
             // 
@@ -180,11 +182,11 @@
             this.Controls.Add(this.gboOperaciones);
             this.Controls.Add(this.gboOperacionesSeleccion);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvBaseDatos);
+            this.Controls.Add(this.dgvDatosBaseDatos);
             this.Name = "frmBdOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de Datos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaseDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosBaseDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.gboOperacionesSeleccion.ResumeLayout(false);
             this.gboOperaciones.ResumeLayout(false);
@@ -194,7 +196,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvBaseDatos;
+        private System.Windows.Forms.DataGridView dgvDatosBaseDatos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnJuntar;
         private System.Windows.Forms.Button btnProyeccionMultiatributo;
