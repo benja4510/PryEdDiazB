@@ -15,8 +15,8 @@ namespace PryEdDiazB
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
-        private string cadenaConexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Libreria.mdb";
-        private string cadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Libreria.mdb";
+        private string cadenaConexion1 = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Libreria.mdb";
+        private string cadenaConexion2 = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Libreria.mdb";
 
         public void Listar(DataGridView Grilla)
         {
