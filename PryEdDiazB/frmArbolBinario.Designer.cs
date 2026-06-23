@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Arbol");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Arbol");
             this.gboNuevoElemento = new System.Windows.Forms.GroupBox();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.gboElementosEliminar = new System.Windows.Forms.GroupBox();
             this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvListaSimple = new System.Windows.Forms.DataGridView();
+            this.lblCodigo2 = new System.Windows.Forms.Label();
+            this.dgvArbol = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboListadoArbol = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.rdoIN = new System.Windows.Forms.RadioButton();
-            this.rdoPRE = new System.Windows.Forms.RadioButton();
             this.rdoPOST = new System.Windows.Forms.RadioButton();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.rdoPRE = new System.Windows.Forms.RadioButton();
+            this.rdoIN = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tvArbol = new System.Windows.Forms.TreeView();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.gboNuevoElemento.SuspendLayout();
             this.gboElementosEliminar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.gboListadoArbol.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.gboNuevoElemento.Controls.Add(this.btnAgregar);
             this.gboNuevoElemento.Controls.Add(this.txtNombre);
             this.gboNuevoElemento.Controls.Add(this.txtCodigo);
-            this.gboNuevoElemento.Controls.Add(this.label1);
+            this.gboNuevoElemento.Controls.Add(this.lblTramite);
             this.gboNuevoElemento.Controls.Add(this.lblNombre);
             this.gboNuevoElemento.Controls.Add(this.lblCodigo);
             this.gboNuevoElemento.Location = new System.Drawing.Point(297, 31);
@@ -88,6 +89,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtNombre
             // 
@@ -103,14 +105,14 @@
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 4;
             // 
-            // label1
+            // lblTramite
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tramite:";
+            this.lblTramite.AutoSize = true;
+            this.lblTramite.Location = new System.Drawing.Point(22, 108);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(45, 13);
+            this.lblTramite.TabIndex = 3;
+            this.lblTramite.Text = "Tramite:";
             // 
             // lblNombre
             // 
@@ -132,9 +134,10 @@
             // 
             // gboElementosEliminar
             // 
+            this.gboElementosEliminar.Controls.Add(this.btnEliminar);
             this.gboElementosEliminar.Controls.Add(this.cmbCodigo);
             this.gboElementosEliminar.Controls.Add(this.btnEquilibrar);
-            this.gboElementosEliminar.Controls.Add(this.label2);
+            this.gboElementosEliminar.Controls.Add(this.lblCodigo2);
             this.gboElementosEliminar.Location = new System.Drawing.Point(531, 31);
             this.gboElementosEliminar.Name = "gboElementosEliminar";
             this.gboElementosEliminar.Size = new System.Drawing.Size(200, 218);
@@ -157,28 +160,28 @@
             this.btnEquilibrar.Size = new System.Drawing.Size(141, 41);
             this.btnEquilibrar.TabIndex = 9;
             this.btnEquilibrar.Text = "Equilibrar";
-            this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
-            // label2
+            // lblCodigo2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Codigo:";
+            this.lblCodigo2.AutoSize = true;
+            this.lblCodigo2.Location = new System.Drawing.Point(21, 60);
+            this.lblCodigo2.Name = "lblCodigo2";
+            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo2.TabIndex = 2;
+            this.lblCodigo2.Text = "Codigo:";
             // 
-            // dgvListaSimple
+            // dgvArbol
             // 
-            this.dgvListaSimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaSimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvListaSimple.Location = new System.Drawing.Point(297, 277);
-            this.dgvListaSimple.Name = "dgvListaSimple";
-            this.dgvListaSimple.Size = new System.Drawing.Size(434, 225);
-            this.dgvListaSimple.TabIndex = 8;
+            this.dgvArbol.Location = new System.Drawing.Point(297, 277);
+            this.dgvArbol.Name = "dgvArbol";
+            this.dgvArbol.Size = new System.Drawing.Size(434, 225);
+            this.dgvArbol.TabIndex = 8;
             // 
             // Column1
             // 
@@ -208,16 +211,17 @@
             this.gboListadoArbol.TabStop = false;
             this.gboListadoArbol.Text = "Listado del Arbol";
             // 
-            // rdoIN
+            // rdoPOST
             // 
-            this.rdoIN.AutoSize = true;
-            this.rdoIN.Location = new System.Drawing.Point(62, 49);
-            this.rdoIN.Name = "rdoIN";
-            this.rdoIN.Size = new System.Drawing.Size(66, 17);
-            this.rdoIN.TabIndex = 0;
-            this.rdoIN.TabStop = true;
-            this.rdoIN.Text = "In-Orden";
-            this.rdoIN.UseVisualStyleBackColor = true;
+            this.rdoPOST.AutoSize = true;
+            this.rdoPOST.Location = new System.Drawing.Point(62, 158);
+            this.rdoPOST.Name = "rdoPOST";
+            this.rdoPOST.Size = new System.Drawing.Size(78, 17);
+            this.rdoPOST.TabIndex = 2;
+            this.rdoPOST.TabStop = true;
+            this.rdoPOST.Text = "Post-Orden";
+            this.rdoPOST.UseVisualStyleBackColor = true;
+            this.rdoPOST.CheckedChanged += new System.EventHandler(this.rdoPOST_CheckedChanged);
             // 
             // rdoPRE
             // 
@@ -229,37 +233,49 @@
             this.rdoPRE.TabStop = true;
             this.rdoPRE.Text = "Pre-Orden";
             this.rdoPRE.UseVisualStyleBackColor = true;
+            this.rdoPRE.CheckedChanged += new System.EventHandler(this.rdoPRE_CheckedChanged);
             // 
-            // rdoPOST
+            // rdoIN
             // 
-            this.rdoPOST.AutoSize = true;
-            this.rdoPOST.Location = new System.Drawing.Point(62, 158);
-            this.rdoPOST.Name = "rdoPOST";
-            this.rdoPOST.Size = new System.Drawing.Size(78, 17);
-            this.rdoPOST.TabIndex = 2;
-            this.rdoPOST.TabStop = true;
-            this.rdoPOST.Text = "Post-Orden";
-            this.rdoPOST.UseVisualStyleBackColor = true;
+            this.rdoIN.AutoSize = true;
+            this.rdoIN.Location = new System.Drawing.Point(62, 49);
+            this.rdoIN.Name = "rdoIN";
+            this.rdoIN.Size = new System.Drawing.Size(66, 17);
+            this.rdoIN.TabIndex = 0;
+            this.rdoIN.TabStop = true;
+            this.rdoIN.Text = "In-Orden";
+            this.rdoIN.UseVisualStyleBackColor = true;
+            this.rdoIN.CheckedChanged += new System.EventHandler(this.rdoIN_CheckedChanged);
             // 
-            // treeView1
+            // tvArbol
             // 
-            this.treeView1.Location = new System.Drawing.Point(24, 31);
-            this.treeView1.Name = "treeView1";
-            treeNode3.Name = "Arbol";
-            treeNode3.Text = "Arbol";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
-            this.treeView1.Size = new System.Drawing.Size(249, 218);
-            this.treeView1.TabIndex = 3;
+            this.tvArbol.Location = new System.Drawing.Point(24, 31);
+            this.tvArbol.Name = "tvArbol";
+            treeNode1.Name = "Arbol";
+            treeNode1.Text = "Arbol";
+            this.tvArbol.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.tvArbol.Size = new System.Drawing.Size(249, 218);
+            this.tvArbol.TabIndex = 3;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(60, 102);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(99, 38);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 514);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvArbol);
             this.Controls.Add(this.gboListadoArbol);
-            this.Controls.Add(this.dgvListaSimple);
+            this.Controls.Add(this.dgvArbol);
             this.Controls.Add(this.gboElementosEliminar);
             this.Controls.Add(this.gboNuevoElemento);
             this.Name = "frmArbolBinario";
@@ -269,7 +285,7 @@
             this.gboNuevoElemento.PerformLayout();
             this.gboElementosEliminar.ResumeLayout(false);
             this.gboElementosEliminar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
             this.gboListadoArbol.ResumeLayout(false);
             this.gboListadoArbol.PerformLayout();
             this.ResumeLayout(false);
@@ -283,14 +299,14 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.GroupBox gboElementosEliminar;
         private System.Windows.Forms.ComboBox cmbCodigo;
         private System.Windows.Forms.Button btnEquilibrar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvListaSimple;
+        private System.Windows.Forms.Label lblCodigo2;
+        private System.Windows.Forms.DataGridView dgvArbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -299,6 +315,7 @@
         private System.Windows.Forms.RadioButton rdoPRE;
         private System.Windows.Forms.RadioButton rdoIN;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvArbol;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
