@@ -17,7 +17,7 @@ namespace PryEdDiazB
             set { Pri = value; }
         }
 
-        // Método para insertar un nodo de forma iterativa
+     
         public void Agregar(clsNodo Nvo)
         {
             if (Raiz == null)
@@ -39,18 +39,17 @@ namespace PryEdDiazB
             }
         }
 
-        // Método de eliminación mediante reconstrucción con Vector/Lista
         public void Eliminar(Int32 CodigoAEliminar)
         {
             List<clsNodo> ListaTemporal = new List<clsNodo>();
 
-            // Pasamos todos los nodos actuales a la lista
+            
             Recorrer(ListaTemporal);
 
-            // Vaciamos el árbol
+           
             Raiz = null;
 
-            // Volvemos a insertar todos menos el que queremos borrar
+           
             foreach (clsNodo nodo in ListaTemporal)
             {
                 if (nodo.Codigo != CodigoAEliminar)
@@ -65,7 +64,7 @@ namespace PryEdDiazB
             }
         }
 
-        // RECORRIDOS: IN-ORDEN (Para DataGridView)
+        
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -80,7 +79,6 @@ namespace PryEdDiazB
             if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
         }
 
-        // RECORRIDOS: IN-ORDEN (Para ComboBox)
         public void Recorrer(ComboBox Lista)
         {
             Lista.Items.Clear();
@@ -95,7 +93,7 @@ namespace PryEdDiazB
             if (R.Derecho != null) InOrdenAsc(Lst, R.Derecho);
         }
 
-        // RECORRIDOS: IN-ORDEN (Para Lista Temporal de Nodos / Eliminación)
+        
         public void Recorrer(List<clsNodo> Vector)
         {
             Vector.Clear();
@@ -110,7 +108,7 @@ namespace PryEdDiazB
             InOrdenAsc(Vec, R.Derecho);
         }
 
-        // RECORRIDOS: PRE-ORDEN (Para DataGridView)
+       
         public void RecorrerPreOrden(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -125,7 +123,7 @@ namespace PryEdDiazB
             PreOrden(Dgv, R.Derecho);
         }
 
-        // RECORRIDOS: POST-ORDEN (Para DataGridView)
+        
         public void RecorrerPostOrden(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -140,7 +138,7 @@ namespace PryEdDiazB
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
-        // RECORRIDOS: PRE-ORDEN GRÁFICO (Para TreeView Ramificado)
+       
         public void Recorrer(TreeView tree)
         {
             tree.Nodes.Clear();
