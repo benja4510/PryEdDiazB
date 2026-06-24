@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="PryEdDiazB/PryEdDiazB.csproj" Id="0dcb903d-23b7-4af4-82e4-4c65901ce303" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PryEdDiazB/PryEdDiazB.csproj" Id="0dcb903d-23b7-4af4-82e4-4c65901ce303">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
 </Solution>

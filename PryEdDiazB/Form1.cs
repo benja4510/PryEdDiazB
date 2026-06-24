@@ -139,5 +139,11 @@ namespace PryEdDiazB
             frmBdRepaso repaso = new frmBdRepaso();
             repaso.ShowDialog();
         }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmbdConsultaSQL consulta = new frmbdConsultaSQL();
+            consulta.ShowDialog();
+        }
     }
 }

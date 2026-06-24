@@ -12,7 +12,8 @@ namespace PryEdDiazB
 {
     public partial class frmBdOperaciones : Form
     {
-        clsBaseDeDatos objBaseDatos = new clsBaseDeDatos();
+        // CORREGIDO: Apunta al nuevo nombre de la clase unificada
+        clsBaseDatos objBaseDatos = new clsBaseDatos();
 
         public frmBdOperaciones()
         {
@@ -24,7 +25,9 @@ namespace PryEdDiazB
             String varSQL = "SELECT * " +
                             "FROM (select * from libro where idIdioma > 1) as X  " +
                             "WHERE IDPAIS = 2";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            // CORREGIDO: Adaptado al orden de parámetros (SQL primero, luego Grilla)
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnJuntar_Click(object sender, EventArgs e)
@@ -32,7 +35,8 @@ namespace PryEdDiazB
             String varSQL = "SELECT TITULO, NOMBRE " +
                             "FROM LIBRO INNER JOIN PAIS " +
                             "on LIBRO.IDPAIS = PAIS.IDPAIS;";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
@@ -40,7 +44,8 @@ namespace PryEdDiazB
             String varSQL = "Select * from libro " +
                             "where idIdioma = 2 and " +
                             "idLibro in (Select idLibro from libro where idPais = 3)";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnDiferencia_Click(object sender, EventArgs e)
@@ -50,7 +55,8 @@ namespace PryEdDiazB
                             "idLibro not in " +
                             "(Select idLibro from libro where idPais = 3) " +
                             "order by 1 asc";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnUnion_Click(object sender, EventArgs e)
@@ -63,20 +69,21 @@ namespace PryEdDiazB
                             "FROM LIBRO " +             // Espacio después de LIBRO
                             "WHERE IDIDIOMA = 2;";
 
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnSeleccionSimple_Click(object sender, EventArgs e)
         {
-
             String varSQL = "SELECT [TITULO] FROM [LIBRO] ORDER BY 1 DESC;";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnSeleccionMultiatributo_Click(object sender, EventArgs e)
         {
             String varSQL = "SELECT [TITULO], [AÑO] FROM [LIBRO] ORDER BY 1 DESC;";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnProyeccionSimple_Click(object sender, EventArgs e)
@@ -84,7 +91,8 @@ namespace PryEdDiazB
             String varSQL = "SELECT TITULO " +
                             "FROM LIBRO " +
                             "ORDER BY 1 DESC";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
 
         private void btnProyeccionMultiatributo_Click(object sender, EventArgs e)
@@ -92,7 +100,8 @@ namespace PryEdDiazB
             String varSQL = "SELECT TITULO, AÑO " +
                             "FROM LIBRO " +
                             "ORDER BY 1 DESC";
-            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+
+            objBaseDatos.ListarOperacion(varSQL, dgvDatosBaseDatos);
         }
     }
 }
