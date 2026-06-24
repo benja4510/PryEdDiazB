@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lblOperacionaRealizar = new System.Windows.Forms.Label();
-            this.cboOperacion = new System.Windows.Forms.ComboBox();
+            this.cmbOperacion = new System.Windows.Forms.ComboBox();
             this.btnListar = new System.Windows.Forms.Button();
-            this.lblVacio = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.Label();
             this.dgvRepaso = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).BeginInit();
             this.SuspendLayout();
@@ -46,13 +46,13 @@
             this.lblOperacionaRealizar.TabIndex = 0;
             this.lblOperacionaRealizar.Text = "Operacion a realizar en la base de datos:";
             // 
-            // cboOperacion
+            // cmbOperacion
             // 
-            this.cboOperacion.FormattingEnabled = true;
-            this.cboOperacion.Location = new System.Drawing.Point(257, 32);
-            this.cboOperacion.Name = "cboOperacion";
-            this.cboOperacion.Size = new System.Drawing.Size(315, 21);
-            this.cboOperacion.TabIndex = 1;
+            this.cmbOperacion.FormattingEnabled = true;
+            this.cmbOperacion.Location = new System.Drawing.Point(257, 32);
+            this.cmbOperacion.Name = "cmbOperacion";
+            this.cmbOperacion.Size = new System.Drawing.Size(315, 21);
+            this.cmbOperacion.TabIndex = 1;
             // 
             // btnListar
             // 
@@ -62,14 +62,15 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // lblVacio
+            // txtDescripcion
             // 
-            this.lblVacio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblVacio.Location = new System.Drawing.Point(27, 70);
-            this.lblVacio.Name = "lblVacio";
-            this.lblVacio.Size = new System.Drawing.Size(649, 103);
-            this.lblVacio.TabIndex = 3;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtDescripcion.Location = new System.Drawing.Point(27, 70);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(649, 103);
+            this.txtDescripcion.TabIndex = 3;
             // 
             // dgvRepaso
             // 
@@ -85,13 +86,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.dgvRepaso);
-            this.Controls.Add(this.lblVacio);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.cboOperacion);
+            this.Controls.Add(this.cmbOperacion);
             this.Controls.Add(this.lblOperacionaRealizar);
             this.Name = "frmBdRepaso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
+            this.Load += new System.EventHandler(this.frmBdRepaso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,9 +103,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblOperacionaRealizar;
-        private System.Windows.Forms.ComboBox cboOperacion;
+        private System.Windows.Forms.ComboBox cmbOperacion;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Label lblVacio;
+        private System.Windows.Forms.Label txtDescripcion;
         private System.Windows.Forms.DataGridView dgvRepaso;
     }
 }
